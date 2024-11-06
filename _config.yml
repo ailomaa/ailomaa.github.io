@@ -1,13 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
@@ -27,14 +17,42 @@ url: "https://ailomaa.github.io" # the base hostname & protocol for your site, e
 #twitter_username: NONE
 github_username:  ailomaa
 
-# Build settings
-theme: minima
+# Theme settings
+#theme: ailomaa.github.io.theme
+#remote_theme: https://github.com/ailomaa/ailomaa.github.io.theme
+
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 
 source: src
 destination: public
 
+# people is a collection
+collections:
+  people:
+    output: true
+
+# layout defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "person"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
