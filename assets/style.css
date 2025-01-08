@@ -117,6 +117,10 @@ footer {
 }
 
 @media all and (min-width: 800px) {
+    /* body {
+        padding: 0 500px;
+        margin: 0 500px;
+    } */
     .grid-footer {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
@@ -223,6 +227,12 @@ a {
     }
 }
 
+
+/* Page: events */
+.event-list-row {
+    border: 1px solid #777777;
+    border-radius: 25%;
+}
 
 /* Page: people */
 .person-grid {
