@@ -26,8 +26,8 @@ future: true
 plugins:
   - jekyll-feed
 
-source: docs
-destination: _site
+source: ./
+destination: ../_site
 
 collections:
   people:
