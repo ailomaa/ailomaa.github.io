@@ -3,14 +3,13 @@ layout: default
 ---
 
 <!-- we only want files from the collection '_people' that are named index -->
-{% assign people = site.people | where: "title", true %}
-{% assign directors = people | where: "role", 0  | where: "slug", "index" | sort: "name" %}
-{% assign coordinators = people | where: "role", 1  | where: "slug", "index" | sort: "name" %}
-{% assign administrators = people | where: "role", 2  | where: "slug", "index" | sort: "name" %}
-{% assign researchers = people | where: "role", 3  | where: "slug", "index" | sort: "name" %}
-{% assign post_docs = people | where: "role", 6  | where: "slug", "index" | sort: "name" %}
-{% assign phds = people | where: "role", 4  | where: "slug", "index" | sort: "name" %}
-{% assign past_members = people | where: "role", 5  | where: "slug", "index" | sort: "name" %}
+{% assign directors = site.people | where: "role", 0  | where: "slug", "index" | sort: "name" %}
+{% assign coordinators = site.people | where: "role", 1  | where: "slug", "index" | sort: "name" %}
+{% assign administrators = site.people | where: "role", 2  | where: "slug", "index" | sort: "name" %}
+{% assign researchers = site.people | where: "role", 3  | where: "slug", "index" | sort: "name" %}
+{% assign post_docs = site.people | where: "role", 6  | where: "slug", "index" | sort: "name" %}
+{% assign phds = site.people | where: "role", 4  | where: "slug", "index" | sort: "name" %}
+{% assign past_members = site.people | where: "role", 5  | where: "slug", "index" | sort: "name" %}
 
 ## Direction
 
