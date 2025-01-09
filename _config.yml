@@ -28,7 +28,7 @@ future: true
 plugins:
   - jekyll-feed
 
-source: src
+source: docs
 destination: public
 
 # post url structure
