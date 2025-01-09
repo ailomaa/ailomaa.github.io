@@ -29,7 +29,7 @@ plugins:
   - jekyll-feed
 
 source: docs
-destination: public
+destination: _site
 
 # post url structure
 # permalinks:
