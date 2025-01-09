@@ -2,8 +2,10 @@
 layout: default
 ---
 
+{{ site.people | inspect }}
+
 <!-- we only want files from the collection '_people' that are named index -->
-{% assign people = site.data.people | default: [] %}
+{% assign people = site.people | where: "title", true %}
 {% assign directors = people | where: "role", 0  | where: "slug", "index" | sort: "name" %}
 {% assign coordinators = people | where: "role", 1  | where: "slug", "index" | sort: "name" %}
 {% assign administrators = people | where: "role", 2  | where: "slug", "index" | sort: "name" %}
