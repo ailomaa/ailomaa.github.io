@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{{ site.people | inspect }}
-
 <!-- we only want files from the collection '_people' that are named index -->
 {% assign people = site.people | where: "title", true %}
 {% assign directors = people | where: "role", 0  | where: "slug", "index" | sort: "name" %}
