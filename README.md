@@ -42,7 +42,25 @@ Each time you edit and save a file, the web site is automatically regenerated, s
 
 ### Committing changes
 
-If you are happy with the changes you've made, commit them to your `dev` branch:
+You've tested your changes locally and now want to commit and push your changes. First, check which branch you are using:
+
+```(bash)
+git branch
+```
+
+#### If you made your changes in 'main'
+
+If you didn't create a `dev` branch, but made your changes in `main`, the procedure is slightly simpler.
+```(bash)
+git add .
+git commit "write something informative here"
+git pull --rebase
+git push origin main
+```
+
+#### If you made your changes in 'dev'
+
+First commit your changes:
 
 ```(bash)
 git add .
